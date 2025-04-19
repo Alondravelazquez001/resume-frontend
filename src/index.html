@@ -1,0 +1,130 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alondra Velazquez - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .contact-info p {
+            margin: 0;
+            padding: 2px 0;
+        }
+
+        .section-title {
+            color: #0056b3;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .resume-header h1 {
+            margin: 0;
+        }
+
+        .resume-header a {
+            color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="resume-header">
+        <h1>Alondra Velazquez</h1>
+        <p>520 brickell key Miami Beach, Florida 33139</p>
+        <p>Phone: 650-288-4502 | Email: <a href="mailto:alovelop98@gmail.com">alovelop98@gmail.com</a></p>
+        <p><a href="https://www.linkedin.com/in/alondra-velazquez-6b040b233/" target="_blank">LinkedIn Profile</a></p>
+    </div>
+
+    <div class="section-title">Skills</div>
+    <div class="content">
+        <ul>
+            <li>Customer Service & IT Support</li>
+            <li>Bilingual Communication (English & Spanish)</li>
+            <li>Data Entry & Management</li>
+            <li>Basic Health Tech Knowledge</li>
+            <li>Team Collaboration & IT Projects</li>
+        </ul>
+    </div>
+
+    <div class="section-title">Experience</div>
+    <div class="content">
+        <p><strong>Target</strong> | Cashier</p>
+        <p>San Francisco/Miami | 10/2018 - 05/2023</p>
+        <ul>
+            <li>Managed POS system and processed transactions, ensuring accurate data handling—valuable experience for IT support roles.</li>
+            <li>Worked with inventory management software to organize and restock products, a good foundation for understanding software systems.</li>
+        </ul>
+
+        <p><strong>HCA</strong> | Nurse Extern</p>
+        <p>Miami | 11/2023 - Present</p>
+        <ul>
+            <li>Worked with Electronic Health Records (EHR) systems to input and retrieve patient data, gaining familiarity with healthcare IT systems.</li>
+            <li>Ensured accuracy of digital reports and patient information, transferable to roles like IT auditing or data analysis.</li>
+        </ul>
+
+        <p><strong>Right at Home</strong> | Certified Nursing Assistant (CNA)</p>
+        <p>Miami | 09/2024 - Present</p>
+        <ul>
+            <li>Assisted with the use of tech-driven health monitoring devices, such as mobile health apps or remote monitoring systems, highlighting adaptability with tech tools.</li>
+        </ul>
+    </div>
+
+    <div class="section-title">Education</div>
+    <div class="content">
+        <p><strong>International Training Careers</strong> | Patient Care Technician (PCT)</p>
+        <p>Miami | 08/21 - 05/22</p>
+        <ul>
+            <li>Gained knowledge in healthcare IT systems and software used to track patient care data.</li>
+        </ul>
+
+        <p><strong>Miami Dade College</strong> | Enterprise Cloud Computing</p>
+        <p>Miami | 09/2024 - Present</p>
+        <ul>
+            <li>Studying cloud computing concepts, including the development and management of cloud-based solutions.</li>
+        </ul>
+      <footer>
+    <p>Visitor Count: <span id="visitorCount">Loading...</span></p>
+</footer>
+    </div>
+<p>Visitors: <span id="visitorCount">Loading...</span></p>
+
+<script>
+  fetch('https://yfatem4ua9.execute-api.us-east-1.amazonaws.com/prod/updatevisitorcounter2')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('visitorCount').innerText = data.count;
+    })
+    .catch(error => {
+      console.error('Fetch Error:', error);
+      document.getElementById('visitorCount').innerText = 'Error fetching data';
+    });
+</script>
+</body>
+</html>
